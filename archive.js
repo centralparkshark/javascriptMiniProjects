@@ -710,3 +710,91 @@ console.log(rows)
 }
 
 // feelingLoopy(csv)
+
+function computeArea(width, height) {
+    let area = height * width
+    return (`The area of a rectangle with a width of ${width} and a height of ${height} is ${area} square units.`)
+}
+
+// computeArea(3, 5)
+
+const planetHasWater = function(planet) {
+    planet = planet.toLowerCase()
+    if (planet == "earth" || planet == "mars") {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// planetHasWater("Mars") // true
+// planetHasWater("Mercury") // false
+
+function setColor(bicycle, color = 'purple') {
+	bicycle.color = color;
+}
+
+var a = ['red', 'green', 'blue'];
+
+// a.forEach(function(color) {
+//   console.log(color);
+// });
+
+function validISBN10(isbn) {
+    // TODO: return true if (and only if) isbn is a valid 10-digit ISBN.
+    let total = 0; 
+    for (let i = 0; i <= 9; i++) {
+        if (isbn[i] = "X") {
+            total += ((i + 1) * 10)
+        } else {
+            total += ((i + 1) * isbn[i])
+        }
+        
+    } 
+    // (1*1 + 1*2 + 1*3 + 2*4 + 2*5 + 2*6 + 3*7 + 3*8 + 3*9 + 9*10)
+    console.log(total)
+    if (total % 11 == 0 && isbn.length == 10) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+array = [[1,2,3,1],
+         [4,5,6,4],
+         [7,8,9,7],
+         [7,8,9,7]]
+
+function snail(array) {
+    let a = [];
+    let widthMax = array.length - 1;
+    let heightMax = array[0].length - 1;
+    let widthMin = 0;
+    let heightMin = 0
+    // for each row from min to max 
+    for (let row = heightMin; row <= heightMax; row++) {
+        // for each column from min to max (goes right)
+        for (let col = widthMin; col <= widthMax; col++) {
+            a.push(array[row][col])
+        }
+        heightMin++;
+        // each row from top to bottom (goes down)
+        for (let row = heightMin; row <= heightMax; row++) {         
+            a.push(array[row][widthMax])
+        }
+        //goes left
+        widthMax--;
+        for (let col = widthMax; col >= widthMin; col--) {
+            a.push(array[heightMax][col])
+        }
+        //goes up
+        heightMax--;
+        for (let row = heightMax; row >= heightMin; row--) {         
+            a.push(array[row][widthMin])
+        }
+        widthMin++;
+    }
+    return(a)
+}
+
+ // snail(array)

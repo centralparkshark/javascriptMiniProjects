@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 800px;
+}
+
+.btnContainer {
+    padding: 10px 20px;
+    border-right: 1px solid black;
+    width: 250px;
+}
+
+button {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+button:focus {
+    outline: rgb(56, 113, 235) 3px solid;
+}
+
+main {
+    flex: 1;
+    padding: 10px 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    font-size: 24px;
+}
+
+th:first-child, td:first-child {
+    text-align: left;
+    font-weight: bold;
+}
+
+th:last-child, td:last-child {
+    text-align: right;
+    font-weight: normal;
+}
+
+td {
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+tfoot {
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    margin: 20px 0 0;
+}
